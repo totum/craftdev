@@ -5,7 +5,33 @@
 // -------------------------------------
 
 
+// ----- Regular typography ----- //
 
+html {
+    -webkit-font-smoothing: antialiased; //maxvoltar.com/archive/-webkit-font-smoothing
+    overflow-y: scroll; // force scrollbar to avoid jumping content
+}
+
+p {
+    @extend %margin-topbottom-base;
+}
+
+blockquote {
+    @extend %margin-topbottom-base;
+    @extend %margin-side-zero;
+    border-left: 0.5em red solid;
+    padding-left: 1em;
+    background-color: hsla(30,100%,90%,0.8);
+}
+
+ul {
+    padding-left: 1.5em;
+    list-style: square inside;
+    @include breakpoint($l-break-medium) {
+        // list-style-position: outside;
+        padding-left: 0;
+    }
+}
 
 
 // ----- Headings ----- //
@@ -39,4 +65,17 @@ h6, .h6 {
     @include adjust-font-size-to( $h6-font-size );
     @include leader(1, $h6-font-size);
     @include trailer(1, $h6-font-size);
+}
+
+
+// ----- Misc ----- //
+img {
+    max-width: 100% // for responsive
+}
+
+
+hr {
+    @extend %margin-topbottom-base;
+    background-color: $color-accent;
+    height: 2px;
 }

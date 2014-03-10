@@ -1,3 +1,72 @@
 // -------------------------------------
 //      Navigation
 // -------------------------------------
+
+.nav--wrap {
+}
+	[for="toggle-nav"] {
+		@include span(last 1 of $l-small-columns);
+		// This here looks like a button. and looks floated right. smth wrong.
+		@include leader(1);
+		@include breakpoint($l-break-medium) {
+  			display: none;
+  		}
+  	}
+
+
+	.nav--list {
+		margin: 0; //0 -4em;
+		max-height: 0;
+
+		clear: both;
+		overflow: hidden;
+		opacity: 0;
+
+		line-height: 0;
+		list-style-type: none;
+		text-align: left;
+		opacity: 1;
+  		@include adjust-leading-to(1, $base-font-size);
+
+		@include breakpoint($l-break-small2) {
+			text-align: center;
+		}
+		@include breakpoint($l-break-medium) {
+			max-height: 3em;
+
+			clear: none;
+			opacity: 1;
+
+  			//@include adjust-leading-to(1, $base-font-size);
+			text-align: right;
+		}
+	}
+	.page_item {
+		display: block;
+		@include breakpoint($l-break-small2) {
+			padding: 0 1em;
+			display: inline-block;
+		}
+		@include breakpoint($l-break-medium) {
+			padding-right: 0;
+		}
+	}
+
+
+[id="toggle-nav"]:checked ~ .nav--list {
+  	//@include padding-leader(1);
+	//@include padding-trailer(1);
+	max-height: 10em;
+	@include leading-border($c-border-h, 0, $base-font-size, solid);
+
+  	opacity: 1;
+  	@include adjust-leading-to(1, $base-font-size);
+}
+
+@include breakpoint($l-break-medium) {
+	[id="toggle-nav"]:checked ~ .nav--list {
+  		border: 0;
+  		// @include leading-border(0);
+  		padding-top: 0;
+  	}	
+}

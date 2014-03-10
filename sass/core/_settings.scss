@@ -1,12 +1,23 @@
 // -------------------------------------
 //      Settings
-//      @font-faces, variables
+//      Initiating, devmode, @font-faces, variables
 // -------------------------------------
+
+// -------------------------------------
+//   Dev-mode variables
+// -------------------------------------
+$grid-image: show;
 
 // ----- Vertical rhytm variables, font sizing ----- //
 $base-font-size: 16px;
 $base-line-height: 24px;
 @include establish-baseline;
+
+html {
+	//@include adjust-leading-to(2);
+	// @include debug-vertical-alignment($img: false);
+
+}
 
 $h1-font-size: 2    * $base-font-size;
 $h2-font-size: 1.5  * $base-font-size;
@@ -17,22 +28,104 @@ $h6-font-size: 0.67 * $base-font-size;
 
 
 // ----- Susy variables ----- //
-
-$susy: (
-	columns: 12,
-	gutters: 1/4, //$gutter-width / $column-width,
+/* other settings in maps
+//$gutter-width / $column-width,
 	//column-width: 4em,
-	//container: 64em,
-	math: fluid,
-	//flow: if($from-direction == right, rtl, ltr),
-	//last-flow: if($omega-float == $from-direction, from, to),
+	//container: 40em,
+//flow: if($from-direction == right, rtl, ltr),
+//last-flow: if($omega-float == $from-direction, from, to),
+*/
+
+
+// Generic variables
+$l-gutter-ratio: 1/4;
+$l-gutter-position: inside;
+$l-type: fluid;
+$l-type-xlarge: static;
+$l-boxsizing: border-box;
+
+// Layout padding
+$l-padding-small: 0.5em;
+$l-padding-small2: 1em;
+$l-padding-medium: 2em;
+$l-padding-large: 3em;
+$l-padding-xlarge: 4em;
+
+
+// Layout - Small
+$l-small-columns: 6;
+$l-small-containerw: auto;
+$l-small-margin: 0.5em;
+
+$l-break-small2: 30em; // 480px
+
+$l-break-medium: 48em; // 768px
+$l-medium-columns: 10;
+$l-medium-containerw: auto; // 45
+$l-medium-margin: 1em;
+
+$l-break-large: 64em; // 1024px
+$l-large-columns: 12;
+$l-large-containerw: auto; // 50
+$l-large-margin: 1.5em;
+
+$l-break-xlarge: 87.5em; // 1400px
+$l-xlarge-columns: 12;
+$l-xlarge-containerw: auto;	//70
+$l-xlarge-margin: 3em;
+
+
+
+$l-small: (
+	columns: $l-small-columns,
+	gutters: $l-gutter-ratio, 
+	gutter-position: $l-gutter-position,
+	container: $l-small-containerw,
+	math: $l-type,
 	debug: (
     	image: $grid-image,
     ),
-	global-box-sizing: border-box,
+	global-box-sizing: $l-boxsizing,
+);
+$l-medium: (
+	columns: $l-medium-columns,
+	gutters: $l-gutter-ratio,
+	gutter-position: $l-gutter-position,
+	container: $l-medium-containerw,
+	math: $l-type,
+	debug: (
+    	image: $grid-image,
+    ),
+	global-box-sizing: $l-boxsizing,
+);
+$l-large: (
+	columns: $l-large-columns,
+	gutters: $l-gutter-ratio,
+	gutter-position: $l-gutter-position,
+	container: $l-large-containerw,
+	math: $l-type,
+	debug: (
+    	image: $grid-image,
+    ),
+	global-box-sizing: $l-boxsizing,
+);
+$l-xlarge: (
+	columns: $l-xlarge-columns,
+	gutters: $l-gutter-ratio, 
+	gutter-position: $l-gutter-position,
+	container: $l-xlarge-containerw,
+	math: $l-type,
+	debug: (
+    	image: $grid-image,
+    ),
+	global-box-sizing: $l-boxsizing,
 );
 
-$laptop-side-element: 2.4/13 * 40em; //12em;
+
+
+// ----- #Colors ----- //
+$color-accent: purple;
+
 
 /*
 span(x of y <math>)

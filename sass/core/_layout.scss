@@ -4,3 +4,75 @@
 //      Margins, paddings, width on base layout stuff.
 // -------------------------------------
 
+
+body {
+	//padding: 0 0.5em;
+}
+
+.header,
+.main {
+	@include container($l-small);
+	padding: 0 $l-padding-small;
+
+	@include breakpoint($l-break-small2) {
+		padding: 0 $l-padding-small2;
+	}
+	@include breakpoint($l-break-medium) {
+		@include container($l-medium);
+		padding: 0 $l-padding-medium;
+	} 
+	@include breakpoint($l-break-large) {
+		@include container($l-large);
+		padding: 0 $l-padding-large;
+	}
+	@include breakpoint($l-break-xlarge) {
+		@include container($l-xlarge);
+		padding: 0 $l-padding-xlarge;
+	}
+}
+
+.header {
+	@include trailing-border($c-border-h, 0, $base-font-size, solid);
+}
+
+	.banner {
+		@include span(5 of $l-small-columns);
+		@include breakpoint($l-break-medium) {
+			@include span(4 of $l-medium-columns);
+		} 
+		@include breakpoint($l-break-large) {
+			@include span(4 of $l-large-columns);
+		}
+		@include breakpoint($l-break-xlarge) {
+			@include span(4 of $l-xlarge-columns);
+		}
+	}
+	.nav--wrap {
+		margin-left: -$l-padding-small;
+		margin-right: -$l-padding-small;
+		@include breakpoint($l-break-small2) {
+			margin-left: -$l-padding-small2;
+			margin-right: -$l-padding-small2;
+		}
+		@include breakpoint($l-break-medium) {
+			margin-left: 0;
+			margin-right: 0;
+			@include leader(2);
+			@include span(last 6 of $l-medium-columns);
+		} 
+		@include breakpoint($l-break-large) {
+			@include span(last 8 of $l-large-columns);
+		}
+		@include breakpoint($l-break-xlarge) {
+			@include span(last 8 of $l-xlarge-columns);
+		}
+	}
+
+
+.l-content {
+	// If add float:left, makes main register height including h1
+}
+
+.main {
+	//@include leader(0);
+}

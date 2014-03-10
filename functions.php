@@ -17,20 +17,28 @@ function register_my_menus() {
 }
 add_action( 'init', 'register_my_menus' );
 
-/*function init_scripts() {
+function load_scripts() {
 	if (!is_admin()) {
-		wp_register_script('mobile-nav', get_template_directory_uri().'/js/mobile-nav.js', array('jquery'));
-		wp_enqueue_script('mobile-nav');
-        wp_register_script('ajax-posts-init', get_template_directory_uri().'/js/ajax-posts.js', array('jquery'));
-        wp_enqueue_script('ajax-posts-init');
-        wp_register_script('imagefit', get_template_directory_uri().'/js/jquery.imagefit-0.2.js', array('jquery'));
-        wp_enqueue_script('imagefit');
-        wp_register_script('colorbox', get_template_directory_uri().'/js/colorbox/jquery.colorbox-min.js', array('jquery'));
-        wp_enqueue_script('colorbox');
-        
-		// Jquery dependencies, automatically calls jquery in wp
+		// !Note: Remember to set scripts to load in footer by last parameter set to true, unless you want it loaded in wp_head.
+
+		// Deregister jquery and load from CDNJS for faster loading + presence in users cache
+		wp_deregister_script('jquery');
+   		wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js", false, '2,1,0', true);
+		
+		// Register Scripts common in user cache
+		wp_register_script('html5shiv', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js", false, 'r29', true);
+		wp_register_script('respond', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js", false, '1.4.2', true);
+
+		// Own and uncommon scripts, merged and minified. Ie. sliders, etc.
+
+		// Load scripts that are needed across all pages.
+		wp_enqueue_script('jquery');
+		wp_enqueue_script('html5shiv');
+		wp_enqueue_script('respond');
+
+		// Loaded with conditionals to prevent bloat.
 	}
 }
-add_action('init', 'init_scripts');*/
+add_action('init', 'load_scripts');
 
 ?>

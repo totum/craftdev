@@ -1,0 +1,37 @@
+// -------------------------------------
+//      mainblocks
+//      m-*
+//      For layout styles of different types of layout blocks
+// -------------------------------------
+
+.m-center {
+	@extend %block-1234-centered;
+}
+
+.m-full {
+	@extend %block-1234-allwidth;
+}
+
+.m-full-img-wrap {
+	@extend %block-1234-allwidth;
+	@extend %margin-topbottom-base;
+	height: 6em; // use rhytm here?
+	overflow:hidden;
+}
+
+
+.m-full-img {
+	@extend %img-centered;
+}
+
+
+.m-left-half {
+
+}
+.m-right-half {
+
+}
+
+.m-left-3rd {
+}
+

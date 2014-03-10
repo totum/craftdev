@@ -1,0 +1,25 @@
+// ----- Navigation patterns -----//
+
+%clear {
+    clear: both;
+}
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+%display-block {
+	display: block;
+}
+
+.is-hidden {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+}

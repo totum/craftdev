@@ -8,11 +8,6 @@ Version: 0.1a
 */
 
 // -------------------------------------
-//   Dev-mode variables
-// -------------------------------------
-$grid-image: hide;
-
-// -------------------------------------
 //   Compass imports
 // -------------------------------------
 
@@ -30,9 +25,14 @@ $grid-image: hide;
 @import
 	"core/normalize",
 	"core/settings",
+	// Import of smelt extends after settings are in.
+	"../smelt/smelt_extends",
 	"core/helpers",
 	"core/base",
-	"core/layout";
+	"core/content",
+	"core/layout",
+	"core/print";
+
 
 // -------------------------------------
 //   Modules import
@@ -40,5 +40,5 @@ $grid-image: hide;
 
 @import
 	"modules/button",
-	"modules/navigation",
-	"modules/sidebar";
+	"modules/main-blocks",
+	"modules/navigation";

@@ -6,6 +6,11 @@
  *    user zoom.
  */
 
+// Border-box everywhere. Included by me.
+*, *::before, *::after {
+  @include box-sizing(border-box);
+}
+
 html {
   font-family: sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
@@ -284,6 +289,7 @@ select {
  */
 
 button,
+label,
 html input[type="button"], /* 1 */
 input[type="reset"],
 input[type="submit"] {
@@ -421,3 +427,9 @@ td,
 th {
   padding: 0;
 }
+
+
+// ----- Own additions -----//
+
+// enable better resizing algorhytm in ie7
+.ie7 img { -ms-interpolation-mode: bicubic; }
