@@ -477,72 +477,53 @@ gutter(x <math>)
 @with-layout is like with-grid-settings
 @layout sets global layout. maybe us eon body?
 */
-/* line 15, smelt/smelt_extends.scss */
-.logo {
-  display: block;
-}
-
-/* line 19, smelt/smelt_extends.scss */
-.is-hidden {
-  position: absolute;
-  height: 1px;
-  width: 1px;
+/* line 23, smelt/smelt_extends.scss */
+.nav--list {
+  max-height: 0;
+  opacity: 1;
+  clear: both;
   overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
+}
+@media (min-width: 48em) {
+  /* line 23, smelt/smelt_extends.scss */
+  .nav--list {
+    clear: none;
+  }
 }
 
-/* line 6, sass/core/_helpers.scss */
-.logo {
-  margin: 0;
+/* line 35, smelt/smelt_extends.scss */
+[id="toggle-nav"]:checked ~ .nav--list {
+  max-height: 30em;
 }
 
-/* line 10, sass/core/_helpers.scss */
-blockquote {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-/* line 15, sass/core/_helpers.scss */
-p, blockquote, hr, .m-full-img-wrap {
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
-}
-
-/* line 21, sass/core/_helpers.scss */
-.m-full-img {
-  position: relative;
-  top: -50%;
-  margin-top: -25%;
-}
-
-/* line 32, sass/core/_helpers.scss */
+/* line 47, smelt/smelt_extends.scss */
 .m-full, .m-full-img-wrap {
   margin-left: -0.5em;
   margin-right: -0.5em;
 }
 @media (min-width: 30em) {
-  /* line 32, sass/core/_helpers.scss */
+  /* line 47, smelt/smelt_extends.scss */
   .m-full, .m-full-img-wrap {
     margin-left: -1em;
     margin-right: -1em;
   }
 }
 @media (min-width: 48em) {
-  /* line 32, sass/core/_helpers.scss */
+  /* line 47, smelt/smelt_extends.scss */
   .m-full, .m-full-img-wrap {
     margin-left: -2em;
     margin-right: -2em;
   }
 }
 @media (min-width: 64em) {
-  /* line 32, sass/core/_helpers.scss */
+  /* line 47, smelt/smelt_extends.scss */
   .m-full, .m-full-img-wrap {
     margin-left: -3em;
     margin-right: -3em;
   }
 }
 @media (min-width: 87.5em) {
-  /* line 32, sass/core/_helpers.scss */
+  /* line 47, smelt/smelt_extends.scss */
   .m-full, .m-full-img-wrap {
     margin-left: -4em;
     margin-right: -4em;
@@ -550,25 +531,63 @@ p, blockquote, hr, .m-full-img-wrap {
 }
 
 @media (min-width: 48em) {
-  /* line 53, sass/core/_helpers.scss */
+  /* line 68, smelt/smelt_extends.scss */
   .m-center {
     margin-left: 10.20408%;
     margin-right: 10.20408%;
   }
 }
 @media (min-width: 64em) {
-  /* line 53, sass/core/_helpers.scss */
+  /* line 68, smelt/smelt_extends.scss */
   .m-center {
     margin-left: 16.94915%;
     margin-right: 16.94915%;
   }
 }
 @media (min-width: 87.5em) {
-  /* line 53, sass/core/_helpers.scss */
+  /* line 68, smelt/smelt_extends.scss */
   .m-center {
     margin-left: 25.42373%;
     margin-right: 25.42373%;
   }
+}
+
+/* line 95, smelt/smelt_extends.scss */
+.m-full-img {
+  position: relative;
+  top: -50%;
+  margin-top: -25%;
+}
+
+/* line 109, smelt/smelt_extends.scss */
+.logo, .nav--list {
+  margin: 0;
+}
+
+/* line 113, smelt/smelt_extends.scss */
+blockquote {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* line 118, smelt/smelt_extends.scss */
+p, blockquote, hr, .m-full-img-wrap {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+/* line 141, smelt/smelt_extends.scss */
+.logo {
+  display: block;
+}
+
+/* line 145, smelt/smelt_extends.scss */
+.is-hidden {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
 /*
@@ -894,7 +913,7 @@ hr {
 * print styles
 * inlined to avoid required HTTP connection www.phpied.com/delay-loading-your-print-css/
 */
-/* line 15, sass/modules/_main-blocks.scss */
+/* line 16, sass/modules/_main-blocks.scss */
 .m-full-img-wrap {
   height: 6em;
   overflow: hidden;
@@ -915,16 +934,8 @@ hr {
 
 /* line 17, sass/modules/_navigation.scss */
 .nav--list {
-  margin: 0;
-  max-height: 0;
-  clear: both;
-  overflow: hidden;
-  opacity: 0;
-  line-height: 0;
   list-style-type: none;
   text-align: left;
-  opacity: 1;
-  line-height: 1.5em;
 }
 @media (min-width: 30em) {
   /* line 17, sass/modules/_navigation.scss */
@@ -936,42 +947,37 @@ hr {
   /* line 17, sass/modules/_navigation.scss */
   .nav--list {
     max-height: 3em;
-    clear: none;
-    opacity: 1;
     text-align: right;
   }
 }
 
-/* line 44, sass/modules/_navigation.scss */
+/* line 33, sass/modules/_navigation.scss */
 .page_item {
   display: block;
 }
 @media (min-width: 30em) {
-  /* line 44, sass/modules/_navigation.scss */
+  /* line 33, sass/modules/_navigation.scss */
   .page_item {
     padding: 0 1em;
     display: inline-block;
   }
 }
 @media (min-width: 48em) {
-  /* line 44, sass/modules/_navigation.scss */
+  /* line 33, sass/modules/_navigation.scss */
   .page_item {
     padding-right: 0;
   }
 }
 
-/* line 56, sass/modules/_navigation.scss */
+/* line 45, sass/modules/_navigation.scss */
 [id="toggle-nav"]:checked ~ .nav--list {
-  max-height: 10em;
   border-top-width: 0.1875em;
   border-top-style: solid;
   padding-top: -0.1875em;
-  opacity: 1;
-  line-height: 1.5em;
 }
 
 @media (min-width: 48em) {
-  /* line 67, sass/modules/_navigation.scss */
+  /* line 55, sass/modules/_navigation.scss */
   [id="toggle-nav"]:checked ~ .nav--list {
     border: 0;
     padding-top: 0;

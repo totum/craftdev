@@ -10,7 +10,7 @@
 
 .logo {
     @extend %display-block;
-    @extend %margin-zero;
+    @extend %ore-m--0;
     @include adjust-font-size-to(26px);
     font-weight: normal;
     a {

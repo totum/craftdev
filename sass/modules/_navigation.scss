@@ -15,28 +15,17 @@
 
 
 	.nav--list {
-		margin: 0; //0 -4em;
-		max-height: 0;
-
-		clear: both;
-		overflow: hidden;
-		opacity: 0;
-
-		line-height: 0;
+		@extend %ore-m--0;
+		@extend %ore-n--toggle__list;
 		list-style-type: none;
 		text-align: left;
-		opacity: 1;
-  		@include adjust-leading-to(1, $base-font-size);
+		
 
 		@include breakpoint($l-break-small2) {
 			text-align: center;
 		}
 		@include breakpoint($l-break-medium) {
 			max-height: 3em;
-
-			clear: none;
-			opacity: 1;
-
   			//@include adjust-leading-to(1, $base-font-size);
 			text-align: right;
 		}
@@ -56,11 +45,10 @@
 [id="toggle-nav"]:checked ~ .nav--list {
   	//@include padding-leader(1);
 	//@include padding-trailer(1);
-	max-height: 10em;
 	@include leading-border($c-border-h, 0, $base-font-size, solid);
-
-  	opacity: 1;
-  	@include adjust-leading-to(1, $base-font-size);
+	@extend %ore-n--toggle__checked;
+  	//opacity: 0;
+  	//@include adjust-leading-to(1, $base-font-size);
 }
 
 @include breakpoint($l-break-medium) {
