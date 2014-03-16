@@ -477,7 +477,7 @@ gutter(x <math>)
 @with-layout is like with-grid-settings
 @layout sets global layout. maybe us eon body?
 */
-/* line 23, smelt/smelt_extends.scss */
+/* line 23, ore/ore_extends.scss */
 .nav--list {
   max-height: 0;
   opacity: 1;
@@ -485,45 +485,45 @@ gutter(x <math>)
   overflow: hidden;
 }
 @media (min-width: 48em) {
-  /* line 23, smelt/smelt_extends.scss */
+  /* line 23, ore/ore_extends.scss */
   .nav--list {
     clear: none;
   }
 }
 
-/* line 35, smelt/smelt_extends.scss */
+/* line 35, ore/ore_extends.scss */
 [id="toggle-nav"]:checked ~ .nav--list {
   max-height: 30em;
 }
 
-/* line 47, smelt/smelt_extends.scss */
+/* line 47, ore/ore_extends.scss */
 .m-full, .m-full-img-wrap {
   margin-left: -0.5em;
   margin-right: -0.5em;
 }
 @media (min-width: 30em) {
-  /* line 47, smelt/smelt_extends.scss */
+  /* line 47, ore/ore_extends.scss */
   .m-full, .m-full-img-wrap {
     margin-left: -1em;
     margin-right: -1em;
   }
 }
 @media (min-width: 48em) {
-  /* line 47, smelt/smelt_extends.scss */
+  /* line 47, ore/ore_extends.scss */
   .m-full, .m-full-img-wrap {
     margin-left: -2em;
     margin-right: -2em;
   }
 }
 @media (min-width: 64em) {
-  /* line 47, smelt/smelt_extends.scss */
+  /* line 47, ore/ore_extends.scss */
   .m-full, .m-full-img-wrap {
     margin-left: -3em;
     margin-right: -3em;
   }
 }
 @media (min-width: 87.5em) {
-  /* line 47, smelt/smelt_extends.scss */
+  /* line 47, ore/ore_extends.scss */
   .m-full, .m-full-img-wrap {
     margin-left: -4em;
     margin-right: -4em;
@@ -531,57 +531,57 @@ gutter(x <math>)
 }
 
 @media (min-width: 48em) {
-  /* line 68, smelt/smelt_extends.scss */
+  /* line 68, ore/ore_extends.scss */
   .m-center {
     margin-left: 10.20408%;
     margin-right: 10.20408%;
   }
 }
 @media (min-width: 64em) {
-  /* line 68, smelt/smelt_extends.scss */
+  /* line 68, ore/ore_extends.scss */
   .m-center {
     margin-left: 16.94915%;
     margin-right: 16.94915%;
   }
 }
 @media (min-width: 87.5em) {
-  /* line 68, smelt/smelt_extends.scss */
+  /* line 68, ore/ore_extends.scss */
   .m-center {
     margin-left: 25.42373%;
     margin-right: 25.42373%;
   }
 }
 
-/* line 95, smelt/smelt_extends.scss */
+/* line 95, ore/ore_extends.scss */
 .m-full-img {
   position: relative;
   top: -50%;
   margin-top: -25%;
 }
 
-/* line 109, smelt/smelt_extends.scss */
+/* line 109, ore/ore_extends.scss */
 .logo, .nav--list {
   margin: 0;
 }
 
-/* line 113, smelt/smelt_extends.scss */
+/* line 113, ore/ore_extends.scss */
 blockquote {
   margin-left: 0;
   margin-right: 0;
 }
 
-/* line 118, smelt/smelt_extends.scss */
+/* line 118, ore/ore_extends.scss */
 p, blockquote, hr, .m-full-img-wrap {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
 }
 
-/* line 141, smelt/smelt_extends.scss */
+/* line 141, ore/ore_extends.scss */
 .logo {
   display: block;
 }
 
-/* line 145, smelt/smelt_extends.scss */
+/* line 145, ore/ore_extends.scss */
 .is-hidden {
   position: absolute;
   height: 1px;

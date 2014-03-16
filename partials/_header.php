@@ -1,4 +1,4 @@
-<?php include (TEMPLATEPATH . '/smelt/smelt_template_head.php'); ?>
+<?php include (TEMPLATEPATH . '/ore/ore_template-head.php'); ?>
 <body>
 	<div class="header  clearfix">
 		<header role="banner" class="banner  lc">
